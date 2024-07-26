@@ -1,0 +1,10 @@
+  res = help(o,z,n,"",[])
+  return res
+
+def help(o,z,n,op,res):
+  if n == 0:
+    res.append(op)
+    return
+  
+  if o != n:
+    help(o+1,z,n-1,op+'1',res)

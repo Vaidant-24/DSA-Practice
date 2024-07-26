@@ -1,0 +1,20 @@
+def genPrefix(n):
+  z = 0
+  o = 0
+  res = help(o,z,n,"",[])
+  return res
+
+def help(o,z,n,op,res):
+  if n == 0:
+    res.append(op)
+    return
+  
+  if o >= z:
+    help(o+1,z,n-1,op+'1',res)
+    
+  if z < o:
+    help(o,z+1,n-1,op+'0',res)
+    
+  return res
+
+print(genPrefix(3))
